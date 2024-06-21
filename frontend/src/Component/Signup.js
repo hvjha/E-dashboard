@@ -27,7 +27,8 @@ const Signup = () => {
         })
         const val = await result.json();
         console.log(val)
-        localStorage.setItem('user',JSON.stringify(val))
+        localStorage.setItem('user',JSON.stringify(val.result))
+        localStorage.setItem('token',JSON.stringify(val.auth))
         if(val){
           navigate('/')
           window.dispatchEvent(new Event('storage'));

@@ -33,7 +33,7 @@ const Navbar = () => {
           <>
             <li><Link to="/">Products</Link></li>
             <li><Link to="/add">Add Product</Link></li>
-            <li><Link to="/update">Update Product</Link></li>
+            {/* <li><Link to="/update">Update Product</Link></li> */}
             <li className="profile-li">
               <Link to="/profile">
                 <span className="avatar-span">{JSON.parse(auth).name}</span>

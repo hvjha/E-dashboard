@@ -8,7 +8,7 @@ const AddProduct = () => {
     const[company,setCompany]=useState("");
     const [err,setErr]=useState(false);
     const handleProduct=async(e)=>{
-        // e.preventDefault();
+        e.preventDefault();
         if(!name || !price || !category || !company){
             setErr(true);
             return false;
@@ -18,7 +18,8 @@ const AddProduct = () => {
             method:"POST",
             body:JSON.stringify({name,price,category,company,userId}),
             headers:{
-                'content-Type':"application/json"
+                'content-Type':"application/json",
+                authorization:`bearer ${JSON.parse(localStorage.getItem('token'))}`
             }
         })
         result = await result.json();

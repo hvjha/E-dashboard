@@ -1,13 +1,7 @@
 
-
-body,
-ul {
-  margin: 0;
-  padding: 0;
-  background-color: skyblue;
-}
-
 .nav-ul {
+  margin:0;
+  background-color: skyblue;
   list-style-type: none;
   display: flex;
   justify-content: left;
@@ -65,3 +59,4 @@ ul {
   display: flex;
   align-items: center;
 }
+
